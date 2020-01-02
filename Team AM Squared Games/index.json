@@ -1,8 +1,8 @@
 {
     "list": [{
         "type": "launcher",
-        "title": "QuantumCaverns",
+        "title": "Quantum Caverns",
         "file": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/QuantumCaverns/file/QuantumCaverns.tar.bz",
-        "shots": ["https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/QuantumCaverns/shots/preview_0.png", "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/QuantumCaverns/shots/preview_1.png", "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/QuantumCaverns/shots/preview_2.png"]
+        "shots": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/QuantumCaverns/shots/preview_0.png"
     }]
 }
