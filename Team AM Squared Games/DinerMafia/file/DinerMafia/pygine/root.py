@@ -1,3 +1,4 @@
+import os
 import pygame
 import pygine.globals
 from pygine.resource import load_content
@@ -54,9 +55,9 @@ class Game:
         self.target_fps = target_fps
         self.orientation = orientation
         self.fullscreen = fullscreen
+        pygine.globals.on_cpi = True
 
-        if self.display_width == 320 and self.display_height == 240:
-            pygine.globals.on_cpi = True
+        if str(os.path.dirname(os.path.abspath(__file__)))[:9] == "/home/cpi":
             self.window_width = 320
             self.window_height = 240
             self.target_fps = 60

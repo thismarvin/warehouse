@@ -1,3 +1,4 @@
+import os
 from enum import IntEnum
 from random import randint, random, seed
 from pygame import Rect
@@ -154,8 +155,9 @@ class Scene(object):
         self.camera_location = Vector2(0, 0)
         self.bounds = Rect(0, 0, Camera.BOUNDS.width, Camera.BOUNDS.height)
         self.camera_viewport = Rectangle(
-            -Scene.VIEWPORT_BUFFER, -Scene.VIEWPORT_BUFFER, Camera.BOUNDS.width + Scene.VIEWPORT_BUFFER * 2,
-                                                            Camera.BOUNDS.height + Scene.VIEWPORT_BUFFER * 2, Color.RED,
+            -Scene.VIEWPORT_BUFFER, -Scene.VIEWPORT_BUFFER, Camera.BOUNDS.width +
+            Scene.VIEWPORT_BUFFER * 2,
+            Camera.BOUNDS.height + Scene.VIEWPORT_BUFFER * 2, Color.RED,
             2)
         self.sprites = []
         self.entities = []
@@ -281,11 +283,12 @@ class Village(Scene):
                 e.apply_an_offset(0, 6)
 
     def __load_trees(self):
+        path = os.path.dirname(os.path.abspath(__file__))
         file = open(
-            '/home/cpi/games/Python/diner-mafia/pygine/assets/scenes/trees_village.csv' if pygine.globals.on_cpi
-            else 'pygine/assets/scenes/trees_village.csv',
+            path + '/assets/scenes/trees_village.csv',
             "r"
         )
+        
         for y in range(20):
             row = file.readline().split(",")
             for x in range(40):
@@ -411,11 +414,12 @@ class Forest(Scene):
                 e.apply_an_offset(16, 16)
 
     def __load_trees(self):
+        path = os.path.dirname(os.path.abspath(__file__))
         file = open(
-            '/home/cpi/games/Python/diner-mafia/pygine/assets/scenes/trees_forest.csv' if pygine.globals.on_cpi
-            else 'pygine/assets/scenes/trees_forest.csv',
+            path + '/assets/scenes/trees_forest.csv',
             "r"
         )
+
         for y in range(15):
             row = file.readline().split(",")
             for x in range(20):
@@ -464,11 +468,12 @@ class Ocean(Scene):
         self.song = "song_village.wav"
 
     def __load_bounds(self):
+        path = os.path.dirname(os.path.abspath(__file__))
         file = open(
-            '/home/cpi/games/Python/diner-mafia/pygine/assets/scenes/bounds_ocean.csv' if pygine.globals.on_cpi
-            else 'pygine/assets/scenes/bounds_ocean.csv',
+            path + '/assets/scenes/bounds_ocean.csv',
             "r"
         )
+
         for y in range(15):
             row = file.readline().split(",")
             for x in range(20):
@@ -846,7 +851,7 @@ class FishMinigame(Minigame):
                 self.entities.append(
                     Fishy(y, True if randint(1, 10) <= 5 else False))
             self.fish_spawn_frequency = y * 1.0 / self.ocean_depth * 10 + 1
-                
+
         self.relay_player(Hook(self.ocean_depth))
 
         self.entities.sort(key=lambda e: (-(e.layer + 1)
