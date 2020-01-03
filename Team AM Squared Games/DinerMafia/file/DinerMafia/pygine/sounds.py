@@ -1,3 +1,4 @@
+import os
 import pygame
 from pygame.mixer import Sound, music
 from pygine import globals
@@ -10,12 +11,11 @@ current_song = ""
 def load_sound_paths():
     global MUSIC_PATH
     global SOUND_PATH
-    if globals.on_cpi:
-        MUSIC_PATH = '/home/cpi/games/Python/diner-mafia/pygine/assets/music/'
-        SOUND_PATH = '/home/cpi/games/Python/diner-mafia/pygine/assets/sounds/'
-    else:
-        MUSIC_PATH = 'pygine/assets/music/'
-        SOUND_PATH = 'pygine/assets/sounds/'
+
+    path = os.path.dirname(os.path.abspath(__file__))
+
+    MUSIC_PATH = path + '/assets/music/'
+    SOUND_PATH = path + '/assets/sounds/'
 
     pygame.mixer.init()
     music.set_volume(0.80)
