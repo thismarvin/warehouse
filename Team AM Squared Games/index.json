@@ -1,13 +1,20 @@
 {
     "list": [{
-        "type": "launcher",
-        "title": "DinerMafia",
-        "file": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/DinerMafia/file/DinerMafia.tar.bz",
-        "shots": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/DinerMafia/shots/preview_0.png"
-    }, {
-        "type": "launcher",
-        "title": "QuantumCaverns",
-        "file": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/QuantumCaverns/file/QuantumCaverns.tar.bz",
-        "shots": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/QuantumCaverns/shots/preview_2.png"
-    }]
+            "type": "launcher",
+            "title": "DinerMafia",
+            "file": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/DinerMafia/file/DinerMafia.tar.bz",
+            "shots": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/DinerMafia/shots/preview_0.png"
+        }, {
+            "type": "launcher",
+            "title": "Robosses",
+            "file": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/Robosses/file/Robosses.tar.bz",
+            "shots": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/Robosses/shots/preview_0.png"
+        },
+        {
+            "type": "launcher",
+            "title": "QuantumCaverns",
+            "file": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/QuantumCaverns/file/QuantumCaverns.tar.bz",
+            "shots": "https://raw.githubusercontent.com/thismarvin/warehouse/master/Team%20AM%20Squared%20Games/QuantumCaverns/shots/preview_2.png"
+        }
+    ]
 }
